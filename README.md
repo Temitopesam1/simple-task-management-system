@@ -13,8 +13,8 @@ $ cd https://github.com/Temitopesam1/simple-task-management-system.git
 ## Environment Variable
 Create a .env file in the root directory and add the following environment variables:
 
-MONGODB_URI=your-mongodb-uri
-JWT_SECRET=your-jwt-secret
+- MONGODB_URI=your-mongodb-uri
+- JWT_SECRET=your-jwt-secret
 
 
 
@@ -44,8 +44,8 @@ Ensure MongoDB is running and accessible.
 The base URL for the API is: http://localhost:3000
 
 ## Paths
-/auth
-/tasks
+- /auth
+- /tasks
 
 ## Authentication
 The API uses JWT tokens for authentication. You must include the JWT token in the Authorization header for all requests to protected endpoints.
