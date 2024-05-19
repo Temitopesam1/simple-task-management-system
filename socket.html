@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Client</title>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>WebSocket Client</h1>
+  <script>
+    const socket = io('http://localhost:3000'); // adjust the URL if your server is running on a different address
+
+    socket.on('connect', () => {
+      console.log('Connected to WebSocket server');
+    });
+
+    socket.on('taskCreated', (task) => {
+      console.log('Task created:', task);
+    });
+
+    socket.on('taskUpdated', (task) => {
+      console.log('Task updated:', task);
+    });
+
+    socket.on('taskDeleted', (task) => {
+      console.log('Task deleted:', task);
+    });
+  </script>
+</body>
+</html>
