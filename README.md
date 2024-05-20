@@ -30,15 +30,15 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Additional Information
 Ensure MongoDB is running and accessible.
 - Use tools like Postman or Insomnia to test the RESTful API endpoints.
-- Use a WebSocket client (like the one in the socket.html example) to test real-time updates.
+
+## To stream the data created In real-time
+- Open the socket.html file in a browser. It is located in the root directory of the project.
+- Open the browser's developer console to see the logs for when a task is created, updated, or deleted.
 
 ## Base URL
 The base URL for the API is: http://localhost:3000
