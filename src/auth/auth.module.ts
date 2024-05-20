@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';
 import { User, UserSchema } from './user.schema';
-// import { JwtStrategy } from './jwt.strategy';
 import { AuthService } from './auth.service';
 import { jwtConstants } from './constants';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -21,7 +20,7 @@ import { TasksGateway } from 'src/tasks/tasks.gateway';
     JwtModule.register({
       global: true,
       secret: jwtConstants.secret, 
-      signOptions: { expiresIn: '1h' }, // Token expiration time
+      signOptions: { expiresIn: '1h' }
     }),
   ],
   providers: [

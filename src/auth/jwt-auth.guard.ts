@@ -21,7 +21,6 @@ export class AuthGuard implements CanActivate {
         context.getClass(),
     ]);
     if (isPublic) {
-      // 💡 See this condition
       return true;
     }
 
@@ -37,8 +36,6 @@ export class AuthGuard implements CanActivate {
           secret: jwtConstants.secret
         }
       );
-      // 💡 We're assigning the payload to the request object here
-      // so that we can access it in our route handlers
       request['user'] = payload;
     } catch {
       throw new UnauthorizedException();
@@ -58,9 +55,6 @@ export class IsMineGuard implements CanActivate {
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
-
-    // 💡 We can access the user payload from the request object
-    // because we assigned it in the AuthGuard
   
     const route = request.route.path.split('/')[1];
     const paramId = request.params.id;

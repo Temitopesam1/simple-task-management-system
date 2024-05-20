@@ -11,7 +11,6 @@ import {
     Post,
     UseGuards,
 } from '@nestjs/common';
-// import { AuthGuard } from './jwt-auth.guard';
 import { CreateUserDto, UpdateUserDto, LoginDto } from './dto/user.dto';
 import { AuthService } from './auth.service';
 import { User } from './user.schema';
